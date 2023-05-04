@@ -3,8 +3,9 @@ import java.util.Scanner;
 public class Object {
     private static String entry;
     public static void setEntry() throws InputMismatchException {
+       String apple;
+       String banana;
         Scanner scan = new Scanner(System.in);
-        String cs = ", ";
         System.out.println("Last name?");
         String lastName = scan.nextLine();
         System.out.println("First name?");
@@ -14,10 +15,12 @@ public class Object {
         System.out.println("City name?");
         String city = scan.nextLine();
         System.out.println("Phone number?");
-        Integer phoneNum = scan.nextInt();
+        String phoneNum = scan.next();
         System.out.println("ZIP code?");
         int zip = scan.nextInt();
-        entry = "\n" + lastName + cs + firstName + cs + address + cs + city + cs + zip + cs + phoneNum + cs + "Entry num: ";
+        apple = "\n" + "First: " + firstName + "\n" + "Last: " + lastName + "\n" + "Phone#: " + phoneNum;
+        banana = "Address: " + address + "\n" + "City: " + city + "\n" + "ZIP: " + zip;
+        entry = apple + "\n" + banana;
     }
     public static String getEntry() {
         return entry;

@@ -10,8 +10,12 @@ public class Manager {
         System.out.println("add");
         Object.setEntry();
         entryCount++;
-        entryNum++;
-        phonebook.add(Object.getEntry()+entryNum);
+        entryNum++; //adds a number next to the contact information.
+        if(entryNum < 2) {
+            phonebook.add("Contact " + entryNum + ": " + Object.getEntry());
+        }else {
+            phonebook.add("\n" + "Contact " + entryNum + ": " + Object.getEntry());
+        }
     }
     public static void delete(){
         print();
@@ -27,12 +31,27 @@ public class Manager {
     }
     public static void search(){
         Scanner scan = new Scanner(System.in);
-        System.out.println("Search: (f)irst, (m)iddle, or (l)ast");
+        System.out.println("To flip to a page in the phone book, type 'f', 'm' or 'l'");
+        System.out.println("(f)irst, (m)iddle, or (l)ast");
+        System.out.println("To find a specific contact press 's'");
         String where=scan.nextLine().toLowerCase();
         switch (where) {
             case "f": System.out.println(phonebook.getFirst());
+            break;
             case "m": System.out.println(phonebook.get(entryCount/2));
+            break;
             case "l": System.out.println(phonebook.getLast());
+            break;
+            case "s":
+                System.out.println("please type the name, last name, number, etc. of the contact you wish to view: ");
+                Scanner input = new Scanner(System.in);
+                String search = input.next();
+                for (String element : phonebook) {
+                    if (element.contains(search)) {
+                        System.out.println(element);
+                    }
+                }
+
             default: System.out.println("Invalid");
         }
     }
