@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d08b73ed-bfa1-411b-9b06-c38c2b2fbbf4" name="Changes" comment="File import and file save allows you to save a copy of the phone book to a .txt file">
+    <list default="true" id="d08b73ed-bfa1-411b-9b06-c38c2b2fbbf4" name="Changes" comment="More revised version&#10;different formatting&#10;buffing out the roughness &#10;&#10;*still working on file import and modify*">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Manager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Object.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Object.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,11 +54,19 @@
       <option name="project" value="LOCAL" />
       <updated>1683061362135</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="More revised version&#10;different formatting&#10;buffing out the roughness &#10;&#10;*still working on file import and modify*">
+      <created>1683159584794</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1683159584794</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="File import and file save allows you to save a copy of the phone book to a .txt file" />
-    <option name="LAST_COMMIT_MESSAGE" value="File import and file save allows you to save a copy of the phone book to a .txt file" />
+    <MESSAGE value="More revised version&#10;different formatting&#10;buffing out the roughness &#10;&#10;*still working on file import and modify*" />
+    <option name="LAST_COMMIT_MESSAGE" value="More revised version&#10;different formatting&#10;buffing out the roughness &#10;&#10;*still working on file import and modify*" />
   </component>
 </project>

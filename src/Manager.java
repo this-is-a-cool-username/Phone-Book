@@ -51,7 +51,7 @@ public class Manager {
                         System.out.println(element);
                     }
                 }
-
+            break;
             default: System.out.println("Invalid");
         }
     }
@@ -60,20 +60,19 @@ public class Manager {
         Scanner input = new Scanner(System.in);
         String line;
         LinkedList<String> newPhoneBook = new LinkedList<String>();
-
+       // System.out.println(phonebook.get(0));
         System.out.println("Enter the name of the Phone Book file you wish to import");
         System.out.println("*file must end in .txt extension*");
         String fileName = input.next();
         try {
             if (fileName.endsWith(".txt") && !fileName.isEmpty()) {
-                BufferedReader bf = new BufferedReader(new FileReader(fileName));
-                line = bf.readLine();
-                while (line != null) {
-                    newPhoneBook.add(line);
-                    line = bf.readLine();
+                Scanner s = new Scanner(new File(fileName));
+                while (s.hasNextLine()){
+                   // for(int i = 0; i <= 6; i++) {
+                        newPhoneBook.add(s.nextLine());
+                   //}
                 }
-                bf.close();
-                System.out.println(newPhoneBook);
+                s.close();
                 phonebook = newPhoneBook;
             } else {
                 System.out.println("please enter a file with a .txt extension");
@@ -81,6 +80,9 @@ public class Manager {
         }catch (Exception e){
             System.out.println("Please enter an existing file");
         }
+        System.out.println(phonebook.get(0));
+        System.out.println(phonebook.get(1));
+        System.out.println(phonebook);
     }
 
     public static void save() throws FileNotFoundException {
