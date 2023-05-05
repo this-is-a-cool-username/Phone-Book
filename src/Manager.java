@@ -58,9 +58,14 @@ public class Manager {
 
     public static void upload() throws IOException{
         Scanner input = new Scanner(System.in);
-        String line;
+        String line1;
+        String line2;
+        String line3;
+        String line4;
+        String line5;
+        String line6;
+        String line7;
         LinkedList<String> newPhoneBook = new LinkedList<String>();
-       // System.out.println(phonebook.get(0));
         System.out.println("Enter the name of the Phone Book file you wish to import");
         System.out.println("*file must end in .txt extension*");
         String fileName = input.next();
@@ -68,9 +73,20 @@ public class Manager {
             if (fileName.endsWith(".txt") && !fileName.isEmpty()) {
                 Scanner s = new Scanner(new File(fileName));
                 while (s.hasNextLine()){
-                   // for(int i = 0; i <= 6; i++) {
-                        newPhoneBook.add(s.nextLine());
-                   //}
+                            line1 = s.nextLine();
+                            System.out.println(line1);
+                            line2 = s.nextLine();
+                            line3 = s.nextLine();
+                            line4 = s.nextLine();
+                            line5 = s.nextLine();
+                            line6 = s.nextLine();
+                            line7 = s.nextLine();
+                            System.out.println(line7);
+                            String combine = line1 + line2 + line3 + line4 + line5 + line6 + line7;
+                            newPhoneBook.add(combine);
+                            System.out.println(newPhoneBook.get(0));
+                           // System.out.println(newPhoneBook.get(1));
+
                 }
                 s.close();
                 phonebook = newPhoneBook;
@@ -87,10 +103,11 @@ public class Manager {
 
     public static void save() throws FileNotFoundException {
        Scanner scan = new Scanner(System.in);
+       System.out.println(phonebook.get(0));
        System.out.println("Please type the name of the file you want to save");
        System.out.println("Make sure the name of the file ends in '.txt'");
        String newFile = scan.next();
-        LinkedList<String> savedEdition = new LinkedList<String>(phonebook);
+       LinkedList<String> savedEdition = new LinkedList<String>(phonebook);
 
      if(newFile.endsWith(".txt")) {
          PrintStream fileWriter = new PrintStream(newFile);
